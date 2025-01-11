@@ -1,7 +1,10 @@
 import React from 'react'
+import SectionWrapper from './SectionWrapper'
 
 export default function Generator() {
   return (
-    <div className='min-height-screen'>Generator</div>
+    <SectionWrapper header={"generate your workout"} title={["It's", "Huge", "o'clock"]}>
+ 
+    </SectionWrapper>
   )
 }
