@@ -25,7 +25,7 @@ export default function Generator() {
 			<div className='grid grid-cols-2 sm:grid-cols-4 gap-4'>
 				{Object.keys(WORKOUTS).map((type, typeIndex) => {
 					return (
-						<button className='bg-slate-950 border border-blue-400 py-3 rounded-lg' key={typeIndex}>
+						<button className='bg-slate-950 border border-blue-400 duration-200 hover:border-blue-600 py-3 rounded-lg' key={typeIndex}>
 							<p>{type}</p>
 						</button>
 					)
