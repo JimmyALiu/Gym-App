@@ -21,7 +21,7 @@ export default function Generator() {
 	const [showModal, setShowModal] = useState(false)
 	const [poison, setPoison] = useState('individual')
 	const [muscles, setMuscles] = useState([])
-	const [goals, setGoals] = useState('strength_power')
+	const [goal, setGoal] = useState('strength_power')
 
 	function toggleModal() {
 		setShowModal(!showModal)
@@ -34,7 +34,9 @@ export default function Generator() {
 			<div className='grid grid-cols-2 sm:grid-cols-4 gap-4'>
 				{Object.keys(WORKOUTS).map((type, typeIndex) => {
 					return (
-						<button className='bg-slate-950 border border-blue-400 duration-200 hover:border-blue-600 py-3 rounded-lg' key={typeIndex}>
+						<button onClick={() => {
+							setPoison(type)
+						}} className={'bg-slate-950 border border-blue-400 duration-200 hover:border-blue-600 py-3 rounded-lg ' + (type === poison ? 'border-blue-600' : 'border-blue-400')} key={typeIndex}>
 							<p className='capitalize'>{type.replaceAll('_', ' ')}</p>
 						</button>
 					)
@@ -61,7 +63,9 @@ export default function Generator() {
 			<div className='grid grid-cols-3 gap-4'>
 				{Object.keys(SCHEMES).map((scheme, schemeIndex) => {
 					return (
-						<button className='bg-slate-950 border border-blue-400 duration-200 hover:border-blue-600 py-3 rounded-lg' key={schemeIndex}>
+						<button onClick={() => {
+							setGoal(scheme)
+						}} className={'bg-slate-950 border border-blue-400 duration-200 hover:border-blue-600 py-3 rounded-lg ' + (scheme === goal ? 'border-blue-600' : 'border-blue-400')} key={schemeIndex}>
 							<p className='capitalize'>{scheme.replaceAll('_', ' ')}</p>
 						</button>
 					)
