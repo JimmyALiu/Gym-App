@@ -26,7 +26,7 @@ export default function Generator() {
 				{Object.keys(WORKOUTS).map((type, typeIndex) => {
 					return (
 						<button className='bg-slate-950 border border-blue-400 duration-200 hover:border-blue-600 py-3 rounded-lg' key={typeIndex}>
-							<p>{type}</p>
+							<p className='capitalize'>{type.replaceAll('_', ' ')}</p>
 						</button>
 					)
 				})}
