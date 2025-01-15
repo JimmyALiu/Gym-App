@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import SectionWrapper from './SectionWrapper'
+import Button from './Button'
 import { SCHEMES, WORKOUTS } from '../utils/excercises'
 
 
@@ -28,9 +29,6 @@ export default function Generator() {
 	}
 
 	function updateMuscles(muscleGroup) {
-		console.log("called")
-		console.log(muscles)
-		console.log(muscleGroup)
 		if (muscles.includes(muscleGroup)) {
 			setMuscles(muscles.filter(val => val !== muscleGroup))
 			return
@@ -105,6 +103,8 @@ export default function Generator() {
 					)
 				})}
 			</div>
+
+			<Button text='Formulate' />
 		</SectionWrapper>
 	)
 }
