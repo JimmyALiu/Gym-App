@@ -42,8 +42,7 @@ export default function Generator(props) {
 			return
 		}
 
-		setMuscles([...muscles, muscleGroup])
-		if (muscles.length === 3) {
+		if (muscles.length === 2) {
 			setShowModal(false)
 		}
 	}
@@ -102,7 +101,7 @@ export default function Generator(props) {
 				})}
 			</div>
 
-			<Button onClick={updateWorkout} text='Formulate'/>
+			<Button func={updateWorkout} onClick={updateWorkout} text='Formulate'/>
 		</SectionWrapper>
 	)
 }
