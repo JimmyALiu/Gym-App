@@ -60,7 +60,7 @@ export default function Generator() {
 						<button onClick={() => {
 							setMuscles([])
 							setPoison(type)
-						}} className={'bg-slate-950 border border-blue-400 duration-200 hover:border-blue-600 py-3 rounded-lg ' + (type === poison ? 'border-blue-600' : 'border-blue-400')} key={typeIndex}>
+						}} className={'bg-slate-950 border border-blue-400 px-4 duration-200 hover:border-blue-600 py-3 rounded-lg ' + (type === poison ? 'border-blue-600' : 'border-blue-400')} key={typeIndex}>
 							<p className='capitalize'>{type.replaceAll('_', ' ')}</p>
 						</button>
 					)
@@ -97,7 +97,7 @@ export default function Generator() {
 					return (
 						<button onClick={() => {
 							setGoal(scheme)
-						}} className={'bg-slate-950 border border-blue-400 duration-200 hover:border-blue-600 py-3 rounded-lg ' + (scheme === goal ? 'border-blue-600' : 'border-blue-400')} key={schemeIndex}>
+						}} className={'bg-slate-950 border border-blue-400 px-4 duration-200 hover:border-blue-600 py-3 rounded-lg ' + (scheme === goal ? 'border-blue-600' : 'border-blue-400')} key={schemeIndex}>
 							<p className='capitalize'>{scheme.replaceAll('_', ' ')}</p>
 						</button>
 					)
