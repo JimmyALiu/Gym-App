@@ -28,21 +28,28 @@ export default function Generator() {
 	}
 
 	function updateMuscles(muscleGroup) {
-		if (muscles.length > 2) {
-			return 
-		}
-	
-		if (poison !== 'individual') {
-			setMuscles([muscleGroup])
-			return
-		}
-	
+		console.log("called")
+		console.log(muscles)
+		console.log(muscleGroup)
 		if (muscleGroup.includes(muscleGroup)) {
 			setMuscles(muscles.filter(val => val !== muscleGroup))
 			return
 		}
 
+		if (muscles.length > 3) {
+			return 
+		}
+	
+		if (poison !== 'individual') {
+			setMuscles([muscleGroup])
+			setShowModal(false)
+			return
+		}
+
 		setMuscles([...muscles, muscleGroup])
+		if (muscles.length === 3) {
+			setShowModal(false)
+		}
 	}
 
 	return (
@@ -66,7 +73,7 @@ export default function Generator() {
 
 			<div className='bg-slate-950 border border-solid border-blue-400 rounded-lg flex flex-col'>
 				<button onClick={toggleModal} className='relative flex p-3 item-center justify-center'>
-					<p>Select muscle groups</p>
+					<p>{'Select muscle groups'}</p>
 					<i className="fa-solid absolute right-3 top-1/2 -translate-y-1/2 fa-solid fa-caret-down"></i>
 				</button>
 				{showModal && (
