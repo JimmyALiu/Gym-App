@@ -18,11 +18,8 @@ function Header(props) {
 }
 
 
-export default function Generator() {
-	const [showModal, setShowModal] = useState(false)
-	const [poison, setPoison] = useState('individual')
-	const [muscles, setMuscles] = useState([])
-	const [goal, setGoal] = useState('strength_power')
+export default function Generator(props) {
+	const { showModal, setShowModal, poison, setPoison, muscles, setMuscles, goal, setGoal } = props
 
 	function toggleModal() {
 		setShowModal(!showModal)
