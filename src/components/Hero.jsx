@@ -9,7 +9,9 @@ export default function Hero() {
 				<h1 className='uppercase font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl'>Swole<span className='text-blue-400 font-medium'>normous</span></h1>
 			</div>
 			<p className='text-sm md:text-nase font-light'>An app built using JS, React, and Tailwind to help plan your workouts</p>
-			<Button text='Accept & Begin'/>
+			<Button func={() => {
+				window.location.href = '#generate'
+			}} text='Accept & Begin'/>
 		</div>
 	)
 }
