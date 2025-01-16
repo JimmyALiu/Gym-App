@@ -3,8 +3,9 @@ import SectionWrapper from './SectionWrapper'
 
 export default function Workout(props) {
   const { workout } = props
+
   return (
-    <SectionWrapper header={"generate your workout"} title={['The', 'DANGER', 'zone']}>
+    <SectionWrapper header={"welcome to"} title={['The', 'DANGER', 'zone']}>
 
     </SectionWrapper>
   )
